@@ -1,0 +1,85 @@
+{% extends "create_order/base_create_order.html" %}
+
+{% block content %}
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Создание заказа</br>
+                    <small>Выбор материалов</small>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+
+                <form action="/order/step4/" method="POST">
+                  {% csrf_token %}
+
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-responsive" src="http://placehold.it/750x450">
+                        </div>
+                        <div class="col-md-6">
+                            <p>Подошва: <b>Tunit</b></br>
+
+                            Модель: <b>Oxford cap toe</b></br>
+                            Примерная стоимость: <b>3000 р</b></br>
+                            Примерные сроки изготовления: <b>5-7 дней</b></p>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-6">
+                            <img class="img-responsive" src="http://placehold.it/750x450"></br>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group row">
+                        <label for="exampleSelect1">Выберите материал #1 из <a href="" target="_blank">каталога</a></label>
+                        <select class="form-control" id="exampleSelect1">
+                          <option>Замша красная</option>
+                          <option>Замша белая</option>
+                          <option>Кожа красная</option>
+                          <option>Кожа синяя</option>
+                        </select>
+                        </div>
+                        <div class="form-group row">
+                        <label for="exampleSelect2">Выберите материал #2 из <a href="" target="_blank">каталога</a></label>
+                        <select class="form-control" id="exampleSelect2">
+                          <option>Замша красная</option>
+                          <option>Замша белая</option>
+                          <option>Кожа красная</option>
+                          <option>Кожа синяя</option>
+                        </select>
+                        </div>
+                        <div class="form-group row">
+                        <label for="exampleSelect3">Выберите материал #3 из <a href="" target="_blank">каталога</a></label>
+                        <select class="form-control" id="exampleSelect3">
+                          <option>Замша красная</option>
+                          <option>Замша белая</option>
+                          <option>Кожа красная</option>
+                          <option>Кожа синяя</option>
+                        </select>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleSelect4">Выберите материал #4 из <a href="" target="_blank">каталога</a></label>
+                            <select class="form-control" id="exampleSelect4">
+                              <option>Замша красная</option>
+                              <option>Замша белая</option>
+                              <option>Кожа красная</option>
+                              <option>Кожа синяя</option>
+                            </select>
+                        </div>
+                    </div>
+
+                  <button type="submit" class="btn btn-primary">Следующий шаг</button>
+                </form>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+{% endblock %}

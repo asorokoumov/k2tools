@@ -1,0 +1,95 @@
+{% extends "create_order/base_create_order.html" %}
+
+{% block content %}
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Создание заказа</br>
+                    <small>Выбор модели</small>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <form action="/order/step7/" method="POST">
+                  {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-responsive" src="http://placehold.it/750x450">
+                        </div>
+                        <div class="col-md-6">
+                            <p>Подошва: <b>Tunit</b></br>
+
+                            Модель: <b>Oxford cap toe</b></br>
+                            Примерная стоимость: <b>6000 р</b></br>
+                            Примерные сроки изготовления: <b>5-7 дней</b></br></br>
+                            Материал #1: <b>кожа красная Avian</b></br>
+                            Материал #2: <b>нубук серый Avian</b></br>
+                            Материал #3: <b>кожа серая GrandDepo</b></br>
+                            Материал #4: <b>кожа серая Vault</b></br></br>
+                            Шнурки: <b>замша красная</b></br>
+                            Глассаж: <b>да</b></br>
+                            Надпись на стельке: <b>нет</b></br>
+                            37 размер: <b>5 шт, увеличенная полнота</b></br>
+                            42 размер: <b>2 шт, увеличенная полнота</b></br>
+                            44 размер: <b>15 шт, увеличенная полнота</b></br>
+
+                            </p>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="form-group">
+                        <div class="form-group row">
+                            <label for="exampleTextInput1">Адрес доставки</label>
+                            <input class="form-control" type="text" value="" id="exampleTextInput1">
+                            </input>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleTextInput1">Имя</label>
+                            <input class="form-control" type="text" value="" id="exampleTextInput1">
+                            </input>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleTextInput1">Телефон</label>
+                            <input class="form-control" type="text" value="" id="exampleTextInput1">
+                            </input>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleTextInput1">Почта</label>
+                            <input class="form-control" type="text" value="" id="exampleTextInput1">
+                            </input>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleTextInput1">Телеграм</label>
+                            <input class="form-control" type="text" value="" id="exampleTextInput1">
+                            </input>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleTextInput1">Дедлайн</label>
+                            <input class="form-control" type="text" value="" id="exampleTextInput1">
+                            </input>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleTextInput1">Комментарий</label>
+                            <input class="form-control" type="text" value="" id="exampleTextInput1">
+                            </input>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="exampleTextInput1">Кто порекомендовал</label>
+                            <input class="form-control" type="text" value="" id="exampleTextInput1">
+                            </input>
+                        </div>
+
+                    </div>
+                        <div class="form-group row">
+
+                  <button type="submit" class="btn btn-primary">Оформить заказ</button>
+                            </div>
+                </form>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+{% endblock %}

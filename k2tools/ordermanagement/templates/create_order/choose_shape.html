@@ -1,0 +1,44 @@
+{% extends "create_order/base_create_order.html" %}
+
+{% block content %}
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Создание заказа</br>
+                    <small>Выбор модели</small>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <form action="/order/step3/" method="POST">
+                  {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-responsive" src="http://placehold.it/750x450">
+                        </div>
+                        <div class="col-md-6">
+                            <p>Подошва: <b>Tunit</b></br>
+
+                            Примерная стоимость: <b>3000 р</b></br>
+                            Примерные сроки изготовления: <b>5-7 дней</b></p>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="form-group">
+                        <label for="exampleSelect1">Выберите модель из <a href="" target="_blank">каталога</a></label>
+                        <select class="form-control" id="exampleSelect1">
+                          <option>Oxford cap toe</option>
+                          <option>Best basic sneakers</option>
+                          <option>Imposibly awsome boots</option>
+                        </select>
+                    </div>
+
+                  <button type="submit" class="btn btn-primary">Выбор материалов</button>
+                </form>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+{% endblock %}
